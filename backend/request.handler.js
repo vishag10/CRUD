@@ -4,7 +4,7 @@ import userSchema from "./model.js"
  export async function addUser(req,res){
   const {username,email,phone}=req.body;
   console.log(req.body);
-  res.status(200).send({msg:"successfully added"})
+  res.status(201).send({msg:"successfully added"})
    await userSchema.create({username,email,phone})
 
   
